@@ -1,0 +1,30 @@
+name: napari-camera-control
+display_name: Camera Control
+# use 'hidden' to remove plugin from napari hub search results
+visibility: public
+# see https://napari.org/stable/plugins/technical_references/manifest.html#fields for valid categories
+categories: ["Annotation", "Segmentation", "Acquisition"]
+contributions:
+  commands:
+    - id: napari-camera-control.make_container_widget
+      python_name: napari_camera_control:ImageThreshold
+      title: Make threshold Container widget
+    - id: napari-camera-control.make_magic_widget
+      python_name: napari_camera_control:threshold_magic_widget
+      title: Make threshold magic widget
+    - id: napari-camera-control.make_function_widget
+      python_name: napari_camera_control:threshold_autogenerate_widget
+      title: Make threshold function widget
+    - id: napari-camera-control.make_qwidget
+      python_name: napari_camera_control:ExampleQWidget
+      title: Make example QWidget
+  widgets:
+    - command: napari-camera-control.make_container_widget
+      display_name: Container Threshold
+    - command: napari-camera-control.make_magic_widget
+      display_name: Magic Threshold
+    - command: napari-camera-control.make_function_widget
+      autogenerate: true
+      display_name: Autogenerate Threshold
+    - command: napari-camera-control.make_qwidget
+      display_name: Example QWidget
