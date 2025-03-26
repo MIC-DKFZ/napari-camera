@@ -1,9 +1,10 @@
 [project]
-name = "napari-camera-control"
+name = "napari-camera"
 dynamic = ["version"]
-description = "A simple plugin to get more control on the napari-camera"
+description = "Provides control over camera settings and allows saving and loading full viewer configurations to easily recreate and share consistent visual perspectives."
 readme = "README.md"
 license = {file = "LICENSE"}
+
 authors = [
   {name = "Lars Krämer"},
   {email = "lars.kraemer@dkfz-heidelberg.de"},
@@ -25,10 +26,8 @@ classifiers = [
 ]
 requires-python = ">=3.9"
 dependencies = [
-    "numpy",
-    "magicgui",
+    "napari_toolkit",
     "qtpy",
-    "scikit-image",
 ]
 
 [project.optional-dependencies]
@@ -42,7 +41,7 @@ testing = [
 ]
 
 [project.entry-points."napari.manifest"]
-napari-camera-control = "napari_camera_control:napari.yaml"
+napari-camera = "napari_camera:napari.yaml"
 
 
 
@@ -61,14 +60,14 @@ where = ["src"]
 
 
 [tool.setuptools.dynamic]
-version = {attr = "napari_camera_control.__init__.__version__"}
+version = {attr = "napari_camera.__init__.__version__"}
 
 [tool.black]
-line-length = 79
+line-length = 100
 target-version = ['py38', 'py39', 'py310']
 
 [tool.ruff]
-line-length = 79
+line-length = 100
 lint.select = [
     "E", "F", "W", #flake8
     "UP", # pyupgrade

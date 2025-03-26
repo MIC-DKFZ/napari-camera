@@ -1,0 +1,14 @@
+name: napari-camera
+display_name: Camera Control
+# use 'hidden' to remove plugin from napari hub search results
+visibility: public
+# see https://napari.org/stable/plugins/technical_references/manifest.html#fields for valid categories
+categories: ["Utilities"]
+contributions:
+  commands:
+    - id: napari-camera.CameraControlWidget
+      python_name: napari_camera:CameraControlWidget
+      title: Camera Control
+  widgets:
+    - command: napari-camera.CameraControlWidget
+      display_name: Camera Control
