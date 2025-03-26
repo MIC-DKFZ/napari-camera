@@ -319,7 +319,7 @@ class CameraControlWidget(QWidget):
         set_value(self.dims_order, ", ".join(str(x) for x in config["order"]))
         current_step = config["current_step"]
         if len(current_step) == 2:
-            current_step = [None] + list(current_step)
+            current_step = [0] + list(current_step)
         set_value(self.current_z, str(current_step[0]))
         set_value(self.current_y, str(current_step[1]))
         set_value(self.current_x, str(current_step[2]))
