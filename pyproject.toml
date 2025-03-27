@@ -59,8 +59,8 @@ where = ["src"]
 "*" = ["*.yaml"]
 
 [project.urls]
-Homepage = "https://github.com/MIC-DKFZ/napari-nninteractive"
-Code = "https://github.com/MIC-DKFZ/napari-nninteractive"
+Homepage = "https://github.com/MIC-DKFZ/napari-camera"
+Code = "https://github.com/MIC-DKFZ/napari-camera"
 
 [tool.setuptools.dynamic]
 version = {attr = "napari_camera.__init__.__version__"}
